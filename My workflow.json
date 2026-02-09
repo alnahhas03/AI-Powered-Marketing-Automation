@@ -338,9 +338,9 @@
         3056,
         0
       ],
-      "id": "9521ce19-1b47-418e-8236-3d0b3ff430e6",
+      "id": "",
       "name": "Send a video",
-      "webhookId": "fb562b37-8670-4375-94d9-3ff861a3d88f",
+      "webhookId": "",
       "credentials": {
         "telegramApi": {
           "id": "",
