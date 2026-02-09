@@ -14,12 +14,12 @@
         0,
         0
       ],
-      "id": "f3ccde22-6728-493d-9887-b8a6efff967f",
+      "id": "",
       "name": "Telegram Trigger",
-      "webhookId": "3af3d74c-1c96-4f27-b463-78f2b64d5a4e",
+      "webhookId": "",
       "credentials": {
         "telegramApi": {
-          "id": "DNE5pVK5wy7rUiZa",
+          "id": "",
           "name": "Telegram account"
         }
       }
@@ -29,9 +29,9 @@
         "assignments": {
           "assignments": [
             {
-              "id": "2735b86a-6c4b-4ab6-83df-a1664790a857",
+              "id": "",
               "name": "nahhas",
-              "value": "8560016548:AAGNFB9QXlAVfUHEa4JS0yk9PQjw0f7V7rw",
+              "value": "",
               "type": "string"
             }
           ]
@@ -44,12 +44,12 @@
         208,
         0
       ],
-      "id": "c62a6df8-2f16-4492-998b-1503c233494f",
+      "id": "",
       "name": "Edit Fields"
     },
     {
       "parameters": {
-        "url": "=https://api.telegram.org/bot8560016548:AAGNFB9QXlAVfUHEa4JS0yk9PQjw0f7V7rw/getFile?file_id={{ $('Telegram Trigger').item.json.message.document.thumbnail.file_id }}\n",
+        "url": "=",
         "options": {}
       },
       "type": "n8n-nodes-base.httpRequest",
@@ -58,7 +58,7 @@
         416,
         0
       ],
-      "id": "21984024-b206-454f-a750-75c277172600",
+      "id": "",
       "name": "HTTP Request"
     },
     {
@@ -72,7 +72,7 @@
           "cachedResultName": "GPT-4O-MINI"
         },
         "text": "=You are a product image analysis expert.\n\nYour goal is to analyze any image provided and describe every visual detail about the product in it. Focus on identifying and explaining the following:\n\n- Product name and brand (from logo or visible text)\n- Logo design and placement\n- Colors and packaging details\n- Any visible text, slogans, or numbers on the product\n- Shape, material, and texture\n- Background elements (if any)\n- Lighting and scene context\n\nYour output should only include the description, nothing else.",
-        "imageUrls": "=https://api.telegram.org/file/bot{{ $('Edit Fields').item.json.nahhas }}/{{ $json.result.file_path }}",
+        "imageUrls": "",
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.openAi",
@@ -81,11 +81,11 @@
         624,
         0
       ],
-      "id": "3c1141c6-5e16-4d08-881a-7ca5fd710787",
+      "id": "",
       "name": "Analyze image",
       "credentials": {
         "openAiApi": {
-          "id": "0zd83Yj259YZdPyM",
+          "id": "",
           "name": "n8n free OpenAI API credits"
         }
       }
@@ -104,7 +104,7 @@
         832,
         0
       ],
-      "id": "e5889e78-22af-474b-bc3e-1fb2bd3f22b0",
+      "id": "",
       "name": "AI Agent"
     },
     {
@@ -115,19 +115,19 @@
         992,
         208
       ],
-      "id": "7438e4b1-b083-4827-b547-38891d88b842",
+      "id": "",
       "name": "Think"
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "url": "",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
             {
               "name": "Authorization ",
-              "value": "Bearer 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"
+              "value": ""
             },
             {
               "name": "Content-Type ",
@@ -146,7 +146,7 @@
         1184,
         0
       ],
-      "id": "8b81f035-b80c-4657-925b-00b47e88ef85",
+      "id": "",
       "name": "HTTP Request1"
     },
     {
@@ -157,9 +157,9 @@
         1392,
         0
       ],
-      "id": "89b90bef-e439-440a-be7a-827f72b16b44",
+      "id": "",
       "name": "Wait",
-      "webhookId": "177ac467-a198-4da8-ac98-d213b51cb506"
+      "webhookId": ""
     },
     {
       "parameters": {
@@ -172,7 +172,7 @@
         1600,
         0
       ],
-      "id": "b1b32f3a-0591-4050-ac93-6b733ba27fb3",
+      "id": "",
       "name": "Code in Python"
     },
     {
@@ -186,11 +186,11 @@
         704,
         208
       ],
-      "id": "f1c5c7b4-b079-4c7e-86dd-ad14dd746fd2",
+      "id": "",
       "name": "OpenRouter Chat Model",
       "credentials": {
         "openRouterApi": {
-          "id": "W2lEHAcCzqNAt1fK",
+          "id": "",
           "name": "OpenRouter account"
         }
       }
@@ -224,11 +224,11 @@
         1840,
         0
       ],
-      "id": "b6a96878-f0ed-409f-a143-2f49629ee36a",
+      "id": "",
       "name": "HTTP Request2",
       "credentials": {
         "httpBasicAuth": {
-          "id": "eNfpV02a4p4NuFO5",
+          "id": "",
           "name": "Unnamed credential"
         }
       }
@@ -247,7 +247,7 @@
         2048,
         0
       ],
-      "id": "c85b68c0-22a6-4b40-839b-b8295ffd6d7a",
+      "id": "",
       "name": "AI Agent1"
     },
     {
@@ -259,7 +259,7 @@
           "parameters": [
             {
               "name": "Authorization",
-              "value": "Bearer 164aad6d75b45a870b09ca7fde501623"
+              "value": ""
             },
             {
               "name": "=Content-Type",
@@ -278,7 +278,7 @@
         2400,
         0
       ],
-      "id": "f381f8d8-d443-433b-9131-32606c96be49",
+      "id": "",
       "name": "HTTP Request3"
     },
     {
@@ -298,7 +298,7 @@
           "parameters": [
             {
               "name": "Authorization",
-              "value": "Bearer 164aad6d75b45a870b09ca7fde501623"
+              "value": ""
             }
           ]
         },
@@ -310,7 +310,7 @@
         2848,
         0
       ],
-      "id": "fabbfc08-6825-41ce-bca6-1b7a10d03b01",
+      "id": "",
       "name": "HTTP Request4"
     },
     {
@@ -321,7 +321,7 @@
         2608,
         0
       ],
-      "id": "d4a7aaed-e9b2-43ac-9326-2fcf3c4a4391",
+      "id": "",
       "name": "Wait1",
       "webhookId": "ca946c5b-233a-4bb6-b86e-4fffa51b2f84"
     },
@@ -343,7 +343,7 @@
       "webhookId": "fb562b37-8670-4375-94d9-3ff861a3d88f",
       "credentials": {
         "telegramApi": {
-          "id": "DNE5pVK5wy7rUiZa",
+          "id": "",
           "name": "Telegram account"
         }
       }
